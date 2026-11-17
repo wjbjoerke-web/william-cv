@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!-- HTML describes the content and its meaning. CSS controls its appearance. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This makes the layout use the actual width of a phone screen. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="William Bjoerke's CV: coastal geosciences, geophysics, marine fieldwork and scientific data analysis.">
+  <title>William Bjoerke | Coastal Geosciences &amp; Geophysics</title>
+  <!-- A relative path works both on your computer and on GitHub Pages. -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- header is the introduction to the page. Use only one main h1. -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Curriculum vitae / Marine &amp; coastal sciences</p>
+      <h1>William<br> Bjoerke<span class="accent">.</span></h1>
+      <p class="subtitle">Master’s student in Coastal Geosciences and Geophysics</p>
+      <p class="intro">From marine field measurements to scientific data analysis:
+        understanding the processes that shape our seabed and coastlines.</p>
+      <a class="contact-link" href="mailto:wjbjoerke@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <!-- CSS Grid places the sidebar and main content next to each other. -->
+  <div class="page-layout">
+    <aside class="sidebar" aria-label="Profile and navigation">
+      <section aria-labelledby="profile-title">
+        <h2 id="profile-title">Profile</h2>
+        <!-- A description list pairs labels (dt) with values (dd). -->
+        <dl class="profile-list">
+          <dt>Based in</dt><dd>La Rochelle, France</dd>
+          <dt>Nationality</dt><dd>Danish</dd>
+          <dt>Email</dt><dd><a href="mailto:wjbjoerke@gmail.com">wjbjoerke@gmail.com</a></dd>
+        </dl>
+      </section>
+
+      <!-- Each # link points to the matching id farther down the page. -->
+      <nav aria-label="CV sections">
+        <h2>On this page</h2>
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#fieldwork">Projects &amp; fieldwork</a></li>
+          <li><a href="#skills">Technical skills</a></li>
+        </ul>
+      </nav>
+
+      <section aria-labelledby="languages-title">
+        <h2 id="languages-title">Languages</h2>
+        <ul class="language-list">
+          <li><strong>Danish</strong><span>Native</span></li>
+          <li><strong>English</strong><span>Fluent</span></li>
+          <li><strong>French</strong><span>B1–B2, progressing</span></li>
+        </ul>
+      </section>
+    </aside>
+
+    <main id="main-content">
+      <section id="about" class="cv-section" aria-labelledby="about-title">
+        <p class="section-label">01 / Introduction</p>
+        <h2 id="about-title">A focus on the coast.</h2>
+        <p>I am a geology graduate from the University of Copenhagen, currently
+          studying Environmental Sciences at La Rochelle Université, specialising
+          in Coastal Geosciences and Geophysics.</p>
+        <p>My experience combines hydrological data work at GEUS with university
+          fieldwork, marine measurements and coastal modelling. I am interested
+          in seabed mapping, sediment dynamics and the use of data to understand
+          coastal change.</p>
+        <div class="placement-note">
+          <p class="note-label">Planned research internship</p>
+          <h3>University of Queensland · Brisbane</h3>
+          <p>11 January–9 July 2027. Supervisor-confirmed placement with
+            Dr Jesper Nielsen, studying bathymetric changes near the Tweed River
+            entrance and data-driven models supporting the Sand Bypass Program.</p>
+        </div>
+      </section>
+
+      <section id="experience" class="cv-section" aria-labelledby="experience-title">
+        <p class="section-label">02 / Professional experience</p>
+        <h2 id="experience-title">Working with scientific data.</h2>
+        <article class="entry">
+          <p class="date">2022–2025 · Alongside studies</p>
+          <h3>Assistant — Hydrological Data Work</h3>
+          <p class="organisation">Geological Survey of Denmark and Greenland (GEUS) · Copenhagen</p>
+          <ul>
+            <li>Processed groundwater-level measurements and borehole data from Denmark.</li>
+            <li>Used Excel and Python in Spyder for scientific data analysis and processing.</li>
+            <li>Worked with digitised well measurements, including gamma, resistivity and induction logs.</li>
+            <li>Prepared and uploaded data to GEUS databases.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education" class="cv-section" aria-labelledby="education-title">
+        <p class="section-label">03 / Education</p>
+        <h2 id="education-title">Geology, with a marine perspective.</h2>
+        <article class="entry">
+          <p class="date">2025–2027 · In progress</p>
+          <h3>Master’s in Environmental Sciences</h3>
+          <p class="organisation">Coastal Geosciences and Geophysics · La Rochelle Université, France</p>
+          <p>Marine and coastal geology, sedimentary dynamics, coastal hydrodynamics,
+            coastal modelling in Python, marine data analysis, coastal management and risk.</p>
+        </article>
+        <article class="entry">
+          <p class="date">2021–2025</p>
+          <h3>Bachelor of Science in Geology–Geoscience</h3>
+          <p class="organisation">University of Copenhagen · Denmark</p>
+        </article>
+      </section>
+
+      <section id="fieldwork" class="cv-section" aria-labelledby="fieldwork-title">
+        <p class="section-label">04 / Projects &amp; fieldwork</p>
+        <h2 id="fieldwork-title">From measurements to interpretation.</h2>
+        <article class="entry">
+          <h3>Marine fieldwork at Pertuis d’Antioche</h3>
+          <p class="organisation">University training · Near La Rochelle, France</p>
+          <p>Practical experience with multibeam bathymetry, side-scan sonar and
+            acoustic Doppler current profiler (ADCP) measurements, followed by
+            scientific reporting on the field campaign.</p>
+        </article>
+        <article class="entry">
+          <h3>Coastal modelling &amp; marine data analysis</h3>
+          <p>University work on wave dynamics and coastal modelling using Python,
+            alongside the analysis of waves, tides and sediments.</p>
+        </article>
+        <article class="entry">
+          <h3>Sediment sampling &amp; coastal observation</h3>
+          <p>Field trips in Denmark, Spain, Germany and France.</p>
+        </article>
+      </section>
+
+      <section id="skills" class="cv-section" aria-labelledby="skills-title">
+        <p class="section-label">05 / Technical skills</p>
+        <h2 id="skills-title">Tools &amp; methods.</h2>
+        <dl class="skills-list">
+          <div><dt>GIS</dt><dd>QGIS — intermediate</dd></div>
+          <div><dt>Programming</dt><dd>Python, using Spyder — intermediate</dd></div>
+          <div><dt>Data analysis</dt><dd>Advanced Excel, environmental statistics</dd></div>
+          <div><dt>Coastal modelling</dt><dd>Waves and coastal dynamics</dd></div>
+          <div><dt>Fieldwork</dt><dd>Sediment sampling, coastal observation and marine measurements</dd></div>
+          <div><dt>Scientific communication</dt><dd>Reports and technical summaries</dd></div>
+        </dl>
+      </section>
+    </main>
+  </div>
+
+  <footer class="page-footer">
+    <p>William Bjoerke · Coastal Geosciences &amp; Geophysics</p>
+    <a href="#">Back to top ↑</a>
+  </footer>
+</body>
+</html>

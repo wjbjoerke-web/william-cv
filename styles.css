@@ -1,0 +1,120 @@
+/* 1. Variables: change these values to customise the whole colour scheme. */
+:root {
+  --navy: #142d3b;
+  --teal: #136c70;
+  --seafoam: #b8e1d7;
+  --ink: #253c47;
+  --muted: #536773;
+  --paper: #fbfaf7;
+  --line: #d6dfdd;
+}
+
+/* Border-box keeps padding inside the width you set on an element. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+a { color: var(--teal); text-underline-offset: 0.25em; }
+a:hover { text-decoration-thickness: 0.15em; }
+/* A visible outline helps people who navigate using the Tab key. */
+a:focus-visible { outline: 3px solid var(--teal); outline-offset: 5px; }
+p { margin: 0 0 1rem; }
+h1, h2, h3 { line-height: 1.2; }
+h2 { font-size: 1.9rem; letter-spacing: -0.04em; margin: 0 0 1.4rem; }
+h3 { font-size: 1.1rem; margin: 0 0 0.55rem; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.45rem; }
+
+/* 2. Introduction. max-width keeps text readable on large monitors. */
+.hero { background: var(--navy); color: white; border-bottom: 7px solid var(--seafoam); }
+.hero-inner { max-width: 1120px; margin: 0 auto; padding: 4rem 2rem; }
+.eyebrow, .section-label, .note-label {
+  font-size: 0.73rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+.eyebrow { color: var(--seafoam); margin-bottom: 1.8rem; }
+h1 { font-size: clamp(3.4rem, 8vw, 6rem); letter-spacing: -0.06em; margin: 0 0 1.5rem; line-height: 0.98; }
+.accent { color: var(--seafoam); }
+.subtitle { font-size: 1.2rem; max-width: 40rem; }
+.intro { color: #cbd9dc; max-width: 37rem; }
+.contact-link { display: inline-block; color: var(--seafoam); margin-top: 0.6rem; font-weight: bold; }
+.hero a:focus-visible { outline-color: var(--seafoam); }
+
+/* 3. The main grid: a 230px sidebar, then the remaining space for content. */
+.page-layout {
+  display: grid;
+  grid-template-columns: 230px minmax(0, 1fr);
+  gap: 4rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem;
+}
+.sidebar { border-right: 1px solid var(--line); padding-right: 2rem; }
+.sidebar section, .sidebar nav { margin-bottom: 2.6rem; }
+.sidebar h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; }
+.profile-list, .skills-list { margin: 0; }
+.profile-list dt { color: var(--muted); font-size: 0.8rem; }
+.profile-list dd { margin: 0 0 1rem; font-size: 0.92rem; overflow-wrap: anywhere; }
+.nav-list, .language-list { padding: 0; list-style: none; font-size: 0.92rem; }
+.nav-list a { text-decoration: none; }
+.nav-list a:hover { text-decoration: underline; }
+.language-list strong, .language-list span { display: block; }
+.language-list span { color: var(--muted); font-size: 0.84rem; }
+.language-list li { margin-bottom: 1rem; }
+
+/* 4. Reusable classes give every CV section the same visual structure. */
+.cv-section { padding-bottom: 2.5rem; margin-bottom: 2.5rem; border-bottom: 1px solid var(--line); scroll-margin-top: 1.5rem; }
+.cv-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+.section-label { color: var(--teal); margin-bottom: 0.8rem; }
+.entry + .entry { margin-top: 2rem; }
+.date { font-size: 0.8rem; font-weight: bold; color: var(--teal); margin-bottom: 0.6rem; }
+.organisation { color: var(--muted); font-size: 0.92rem; }
+.placement-note { background: #edf4ef; border-left: 3px solid var(--teal); padding: 1.3rem 1.5rem; margin-top: 1.8rem; }
+.placement-note p:last-child { margin-bottom: 0; font-size: 0.92rem; }
+.note-label { color: var(--teal); margin-bottom: 0.6rem; }
+.skills-list > div { display: grid; grid-template-columns: 165px 1fr; gap: 1rem; padding: 0.8rem 0; border-bottom: 1px solid var(--line); }
+.skills-list dt { font-weight: bold; font-size: 0.9rem; }
+.skills-list dd { margin: 0; font-size: 0.92rem; }
+.page-footer { border-top: 1px solid var(--line); padding: 1.7rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; }
+.page-footer p { margin-bottom: 0.3rem; }
+.skip-link { position: absolute; top: -100px; left: 1rem; background: white; padding: 0.7rem 1rem; z-index: 1; }
+.skip-link:focus { top: 1rem; }
+
+/* 5. On narrow screens, put the sidebar above the main content. */
+@media (max-width: 740px) {
+  .hero-inner { padding: 3rem 1.4rem; }
+  .page-layout { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.4rem; }
+  .sidebar { border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; }
+  .sidebar section, .sidebar nav { margin-bottom: 1.5rem; }
+  .nav-list { display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
+  .skills-list > div { grid-template-columns: 1fr; gap: 0.15rem; }
+  h2 { font-size: 1.65rem; }
+}
+
+/* Honour the visitor's preference for reduced animation. */
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Print using your browser's File > Print menu (or Cmd/Ctrl+P). */
+@media print {
+  body { background: white; color: black; font-size: 10pt; }
+  .hero { background: white; color: black; border-bottom: 1px solid #aaa; }
+  .hero-inner { padding: 1rem 0; }
+  h1 { font-size: 30pt; }
+  h1 br { display: none; }
+  .hero p, .hero a, .accent { color: black; }
+  .page-layout { display: block; padding: 1rem 0; }
+  .sidebar { border: none; padding: 0; }
+  nav, .skip-link, .page-footer { display: none; }
+  .sidebar section { margin-bottom: 1rem; }
+  .cv-section { margin-bottom: 1.2rem; padding-bottom: 1.2rem; }
+  h2, h3 { break-after: avoid; }
+  .entry, .placement-note, .skills-list > div { break-inside: avoid; }
+}
